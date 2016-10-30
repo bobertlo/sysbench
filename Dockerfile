@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.4
 MAINTAINER Tobias Jakobsson <jakobsson.tobias@gmail.com>
 
 RUN apk add --virtual .build-deps git build-base automake autoconf libtool mariadb-dev --update \
