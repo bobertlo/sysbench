@@ -1,8 +1,8 @@
-# sysbench
+# Sysbench
 
 A Docker image for running sysbench, based on Alpine Linux.
 
-## build image
+## Build image
 
 When building the image, it downloads all neccessery tools for compiling it. When it's done, it purges all those packages and adds back dependencies
 
