@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.13
 MAINTAINER Tobias Jakobsson <jakobsson.tobias@gmail.com>
 
 RUN apk add --virtual .build-deps git build-base automake autoconf libtool mariadb-dev --update \
@@ -9,6 +9,6 @@ RUN apk add --virtual .build-deps git build-base automake autoconf libtool maria
   && make \
   && make install \
   && apk del .build-deps \
-  && apk add bash mariadb-client-libs
+  && apk add bash libgcc mariadb-connector-c
 
 CMD ["sysbench"]
